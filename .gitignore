@@ -1,0 +1,20 @@
+# Local Claude/Codex settings may contain host-specific commands and permissions.
+.claude/
+
+# Runtime caches and test caches are local only.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Real bot configs contain Feishu/Lark credentials, local executable paths, and project paths.
+feishu-codex/config/feishu_codex_bot.json
+feishu-claude-v2/config/feishu_claude_bot.v2.json
+
+# Local environment files and runtime output may contain private project context.
+.env
+*.env
+outputs/
+logs/
+state/
+temp/
+*.log

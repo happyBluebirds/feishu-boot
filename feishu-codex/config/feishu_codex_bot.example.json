@@ -1,0 +1,15 @@
+{
+  "app_id": "cli_xxxxxxxxxxxxxxxxx",
+  "app_secret": "your-feishu-app-secret",
+  "codex_path": "codex",
+  "default_cwd": "D:\\code\\your-project",
+  "cwd_aliases": {
+    "main": "D:\\code\\your-project",
+    "demo": "D:\\code\\another-project"
+  },
+  "allowed_chat_ids": [],
+  "permission_mode": "bypassPermissions",
+  "default_model": "",
+  "additional_args": [],
+  "reply_max_chars": 3500
+}
