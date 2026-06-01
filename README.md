@@ -2,9 +2,9 @@
 
 [中文](README.zh-CN.md) | English
 
-Feishu Boot is a Feishu/Lark bot bridge toolkit for running local coding agents from chat. It supports both Codex and Claude Code workflows while keeping source code, execution state, credentials, logs, and screenshots on your own machine.
+Feishu Boot is a local-first Feishu/Lark bot bridge for Codex and coding agents.
 
-Control local Codex and Claude Code coding agents from Feishu/Lark while keeping source code and execution state on your own machine.
+Feishu Boot lets developers control local Codex and coding-agent workflows from Feishu/Lark while keeping source code, credentials, logs, screenshots, and execution state on their own machine.
 
 The project is intended for local-first developer automation: Feishu/Lark is the command surface, and your workstation remains the execution environment.
 
@@ -86,6 +86,7 @@ Feishu Boot is prepared as an open-source local-agent bridge project for Codex a
 ## Documentation
 
 - [中文说明](README.zh-CN.md)
+- [Security policy](SECURITY.md)
 - [Codex bridge guide](feishu-codex/README.md)
 - [Claude Code bridge guide](feishu-claude-v2/README.md)
 - [Troubleshooting](TROUBLESHOOTING.md)

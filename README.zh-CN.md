@@ -2,9 +2,9 @@
 
 中文 | [English](README.md)
 
-Feishu Boot 是一个面向本机编码代理的飞书/Lark 机器人桥接工具集。它同时支持 Codex 和 Claude Code 工作流，让你可以在飞书/Lark 聊天中控制本机编码代理，同时让源码、执行状态、凭据、日志和截图继续保留在自己的机器上。
+Feishu Boot 是一个 local-first 的飞书/Lark 机器人桥接项目，面向 Codex 和各类本机 coding agent。
 
-核心定位：通过飞书/Lark 控制本机 Codex 和 Claude Code 编码代理，同时让源码和执行状态保留在自己的机器上。
+核心定位：Feishu Boot 让开发者可以通过飞书/Lark 控制本机 Codex 和 coding-agent 工作流，同时让源码、凭据、日志、截图和执行状态继续保留在自己的机器上。
 
 这个项目适合本地优先的开发自动化：飞书/Lark 负责接收命令和返回结果，本机工作站负责真正执行任务。
 
@@ -86,6 +86,7 @@ Feishu Boot 面向 Codex 和 Claude Code 用户，定位为开源的本机编码
 ## 文档入口
 
 - [English README](README.md)
+- [安全策略](SECURITY.zh-CN.md)
 - [Codex 桥接说明](feishu-codex/README.md)
 - [Claude Code 桥接说明](feishu-claude-v2/README.md)
 - [排障说明](TROUBLESHOOTING.md)
