@@ -8,6 +8,22 @@ Feishu Boot lets developers control local Codex and coding-agent workflows from 
 
 The project is intended for local-first developer automation: Feishu/Lark is the command surface, and your workstation remains the execution environment.
 
+## Core Capabilities
+
+- Run local Codex tasks from Feishu/Lark chat.
+- Control local Claude Code windows from Feishu/Lark chat.
+- Switch frequently used local work directories from Feishu/Lark chat.
+- Switch models for different Codex or coding-agent workflows.
+- Start, stop, pause, and resume local agent workflows.
+- Forward permission requests to chat and approve or reject them from Feishu/Lark.
+- Capture screenshots for local foreground-agent workflows.
+- Check runtime status and session state from chat.
+- Provide built-in help commands for common operations.
+- Send completion, failure, and status updates back to Feishu/Lark.
+- Support Feishu/Lark long connection mode without requiring a public callback URL.
+- Provide optional HTTP callback mode for Codex bot deployments.
+- Keep real credentials and runtime artifacts outside the public repository.
+
 ## Why This Exists
 
 Remote chat is convenient for asking an agent to continue work, approve a command, check status, or return a screenshot. Source code and execution state, however, often need to stay local. Feishu Boot bridges that gap by connecting Feishu/Lark bot messages to local Codex and Claude Code runners.
@@ -35,22 +51,6 @@ Feishu Boot Gateway
       v
 Local logs / state / screenshots / approval queue
 ```
-
-## Core Capabilities
-
-- Run local Codex tasks from Feishu/Lark chat.
-- Control local Claude Code windows from Feishu/Lark chat.
-- Switch frequently used local work directories from Feishu/Lark chat.
-- Switch models for different Codex or coding-agent workflows.
-- Start, stop, pause, and resume local agent workflows.
-- Forward permission requests to chat and approve or reject them from Feishu/Lark.
-- Capture screenshots for local foreground-agent workflows.
-- Check runtime status and session state from chat.
-- Provide built-in help commands for common operations.
-- Send completion, failure, and status updates back to Feishu/Lark.
-- Support Feishu/Lark long connection mode without requiring a public callback URL.
-- Provide optional HTTP callback mode for Codex bot deployments.
-- Keep real credentials and runtime artifacts outside the public repository.
 
 ## Repository Layout
 
