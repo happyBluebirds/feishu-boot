@@ -60,6 +60,8 @@ class BotConfig:
     default_cwd: str = ""
     cwd_aliases: dict[str, str] = field(default_factory=dict)
     allowed_chat_ids: list[str] = field(default_factory=list)
+    # Controls Codex CLI approval behavior; default avoids adding dangerous bypass flags.
+    permission_mode: str = "default"
     default_model: str = ""
     additional_args: list[str] = field(default_factory=list)
     state_path: str = str(DEFAULT_STATE_PATH)
@@ -144,7 +146,18 @@ class FeishuCodexBot:
             "active_pid": None,
         }, cwd)
 
-        args = [self.config.codex_path, "exec", "--dangerously-bypass-approvals-and-sandbox"]
+        args = [self.config.codex_path, "exec"]
+        if self.config.permission_mode == "bypassPermissions":
+            # Only explicit local opt-in enables bypass mode; examples default to safer Codex behavior.
+            args.append("--dangerously-bypass-approvals-and-sandbox")
+        elif self.config.permission_mode != "default":
+            self.send_text(chat_id, f"不支持的 permission_mode：{self.config.permission_mode}")
+            self.state.update_session(chat_id, {
+                "status": "failed", "finished_at": time.time(),
+                "last_error": f"unsupported permission_mode: {self.config.permission_mode}",
+                "active_pid": None,
+            }, cwd)
+            return
         if self.config.default_model:
             args.extend(["--model", self.config.default_model])
         args.extend(self.config.additional_args)

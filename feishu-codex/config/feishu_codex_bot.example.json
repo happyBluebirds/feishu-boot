@@ -8,6 +8,7 @@
     "demo": "D:\\code\\another-project"
   },
   "allowed_chat_ids": ["oc_xxxxxxxxxxxxxxxxx"],
+  "permission_mode": "default",
   "default_model": "",
   "additional_args": [],
   "reply_max_chars": 3500
