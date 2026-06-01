@@ -20,6 +20,22 @@ Remote chat is convenient for asking an agent to continue work, approve a comman
 | `feishu-claude-v2` | Claude Code | Local foreground window orchestration with Claude hooks | Interactive Claude Code sessions, permission approvals, window and screenshot workflows |
 | `feishu_bot_common` | Shared library | Gateway, state, hook, and message utilities | Reusable Feishu/Lark bot infrastructure |
 
+## Architecture
+
+```text
+Feishu/Lark Chat
+      |
+      v
+Feishu Boot Gateway
+      |
+      +--> feishu-codex      --> Codex CLI         --> local workspace
+      |
+      +--> feishu-claude-v2  --> Claude Code hooks/window
+      |
+      v
+Local logs / state / screenshots / approval queue
+```
+
 ## Core Capabilities
 
 - Run local Codex tasks from Feishu/Lark chat.
@@ -87,6 +103,8 @@ Feishu Boot is prepared as an open-source local-agent bridge project for Codex a
 
 - [中文说明](README.zh-CN.md)
 - [Security policy](SECURITY.md)
+- [Roadmap](ROADMAP.md)
+- [Contributing](CONTRIBUTING.md)
 - [Codex bridge guide](feishu-codex/README.md)
 - [Claude Code bridge guide](feishu-claude-v2/README.md)
 - [Troubleshooting](TROUBLESHOOTING.md)

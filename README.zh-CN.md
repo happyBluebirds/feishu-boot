@@ -20,6 +20,22 @@ Feishu Boot 是一个 local-first 的飞书/Lark 机器人桥接项目，面向 
 | `feishu-claude-v2` | Claude Code | 本机前台窗口编排 + Claude hooks | 交互式 Claude Code 会话、权限审批、窗口和截图工作流 |
 | `feishu_bot_common` | 公共库 | 飞书/Lark 网关、状态、hook 和消息工具 | 可复用机器人基础设施 |
 
+## 架构
+
+```text
+Feishu/Lark Chat
+      |
+      v
+Feishu Boot Gateway
+      |
+      +--> feishu-codex      --> Codex CLI         --> local workspace
+      |
+      +--> feishu-claude-v2  --> Claude Code hooks/window
+      |
+      v
+Local logs / state / screenshots / approval queue
+```
+
 ## 核心能力
 
 - 在飞书/Lark 聊天中运行本机 Codex 任务。
@@ -87,6 +103,8 @@ Feishu Boot 面向 Codex 和 Claude Code 用户，定位为开源的本机编码
 
 - [English README](README.md)
 - [安全策略](SECURITY.zh-CN.md)
+- [路线图](ROADMAP.md)
+- [贡献指南](CONTRIBUTING.md)
 - [Codex 桥接说明](feishu-codex/README.md)
 - [Claude Code 桥接说明](feishu-claude-v2/README.md)
 - [排障说明](TROUBLESHOOTING.md)
